@@ -1,0 +1,14 @@
+<h1 style="text-align: center; padding: 2%;">Liste des résidences</h1>
+<div *ngFor="let R of listResidences" >
+ 
+<div class="card" style="width: 18rem;">
+  <img [src]="R.image" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"> {{ R.name}}</h5>
+    <h5 *ngIf="showA" class="card-title">{{R.address}}</h5>
+    <p class="card-text"> {{R.status}}</p>
+    <a class="btn btn-primary" (click)="show(R)">Show Location</a>
+    
+  </div>
+</div>
+</div>
